@@ -1,5 +1,6 @@
 package sisbli.acesso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Usuario{
@@ -17,7 +18,7 @@ public abstract class Usuario{
     }
 
     public String getNome(){
-        return this.nome;
+        return nome;
     }
 
     public List<Funcionalidade> getFuncionalidades(){
@@ -28,14 +29,22 @@ public abstract class Usuario{
         return "Saindo...";
     }
 
-    /*
-    public statuc <T> List<T> listar(Class<T> instanciaClasse){
-    
+    public static <T> List<T> listar(Class<T> instanciaClasse) {
+        List<T> resultados = new ArrayList<>();
+        for (Usuario usuario : usuarios) {
+            if (instanciaClasse.isInstance(usuario)) {
+                resultados.add(instanciaClasse.cast(usuario));
+            }
+        }
+        return resultados;
     }
-    */
-    /*
-    public static Usuario obter(String login, String senha) {
 
+    public static Usuario obter(String login, String senha) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.login.equals(login) && usuario.senha.equals(senha)) {
+                return usuario;
+            }
+        }
+        return null;
     }
-    */
 }

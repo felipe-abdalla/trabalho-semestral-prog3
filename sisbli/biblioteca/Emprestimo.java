@@ -8,7 +8,7 @@ public class Emprestimo {
     private List<Exemplar> exemplares;
 
     public Emprestimo(Reserva reserva) {
-        exemplares.add(reserva);
+        exemplares.add(reserva.getLivros());
     }
 
     public String getDataRetirada() {

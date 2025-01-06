@@ -1,10 +1,11 @@
 package sisbli.infraestrutura;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class Util{
 
-    public Util(){}
+    private Util(){}
     
     public static String obterDataAtual(){
         LocalDate dataAtual = LocalDate.now();
@@ -28,5 +29,3 @@ public class Util{
 		return (data.format(DateTimeFormatter.ofPattern(formato)));
 	}
 }
-
-

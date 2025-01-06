@@ -1,11 +1,10 @@
 package sisbli;
-import sisbli.divisao.Setor;
-import sisbli.infraestrutura.Util;
+
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import sisbli.infraestrutura.Util;
 
 class Principal{
-    private String TITULO = "Sistema Bibliotecário | v1.0";
+    private String TITULO = "Sistema Bibliotecário";
     public static void main(String[] args){
         
         Util novoUtil = new Util();
