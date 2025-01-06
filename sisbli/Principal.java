@@ -1,19 +1,52 @@
 package sisbli;
 
-import java.time.LocalDate;
+import sisbli.acesso.*;
+import sisbli.biblioteca.*;
+import sisbli.divisao.Setor;
 import sisbli.infraestrutura.Util;
 
+import java.util.*;
+
 class Principal{
-    private String TITULO = "Sistema Bibliotecário";
+    private String TITULO = "Sistema Bibliotecário | v1.0";
     public static void main(String[] args){
-        
-        Util novoUtil = new Util();
+    
+    }
 
-        System.out.println("Data atual: " + novoUtil.obterDataAtual());
-		System.out.println("Somar data: " + novoUtil.somarDiasData("22/03/2025", 5));
-		System.out.println("Converter string pra data: " + novoUtil.converterStringData("31/12/2024", "dd/MM/yyyy"));
-		System.out.println("Converter data para string: " + novoUtil.converterDataString(LocalDate.now(), "dd/MM/yyyy"));
+    public static Usuario autenticar() {
 
+    }
+
+    public static String[] construirMenu(Usuario usuario) {
+
+    }
+
+    public static int selecionarFuncionalidade(String[] funcionalidadesMenu) {
+
+    }
+
+    public static void processarFuncionalidades(Usuario usuario, int funcionalidadeSelecionada) {
+
+    }
+
+    public static ILivroReservado selecionarConsumidor(Aluno usuario, boolean naListaProdutor) {
+
+    }
+
+    public static void listarLivros() {
+        System.out.println("Livros cadastrados:");
+        List<String> livros = Livro.listar();
+        for(String livro : livros) {
+            System.out.println(livro);
+        }
+    }
+
+    public static void exibirMensagensConsumidores(Aluno aluno) {
+
+    }
+
+    public static void sair(Usuario usuario) {
+        usuario.sair();
     }
 }
 
