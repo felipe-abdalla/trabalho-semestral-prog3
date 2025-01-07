@@ -1,7 +1,6 @@
 package sisbli.biblioteca;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Reserva {
     private String data;
@@ -9,11 +8,7 @@ public class Reserva {
 
     public Reserva(String data, List<String> titulosLivros) {
         this.data = data;
-        List<String> titulos = new ArrayList<>(titulosLivros);
-        for(String tituloLivro : titulos) {
-            Livro livro = new Livro(tituloLivro);
-            livros.add(livro);
-        }
+        this.livros = carregarLivros(titulosLivros);
     }
 
     public String getData() {
@@ -24,10 +19,14 @@ public class Reserva {
         return livros;
     }
 
+    // Método que cria a lista de livros com base nos títulos fornecidos
     private List<Livro> carregarLivros(List<String> titulosLivros) {
         List<Livro> livros = new ArrayList<>();
-        for(String titulo : titulosLivros) {
-            livros.add(new Livro(titulo));
+        for (String titulo : titulosLivros) {
+            Livro livro = Livro.obterLivro(titulo);
+            if (livro != null) {
+                livros.add(livro);
+            }
         }
         return livros;
     }
