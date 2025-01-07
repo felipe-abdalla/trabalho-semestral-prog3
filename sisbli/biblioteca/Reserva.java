@@ -25,6 +25,10 @@ public class Reserva {
     }
 
     private List<Livro> carregarLivros(List<String> titulosLivros) {
-        
+        List<Livro> livros = new ArrayList<>();
+        for(String titulo : titulosLivros) {
+            livros.add(new Livro(titulo));
+        }
+        return livros;
     }
 }

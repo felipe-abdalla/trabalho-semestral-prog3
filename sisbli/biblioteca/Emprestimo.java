@@ -32,6 +32,10 @@ public class Emprestimo {
     }
 
     private List<Exemplar> carregarExemplares(List<Livro> livros) {
-
+        List<Exemplar> exemplares = new ArrayList<>();
+        for(Livro livro : livros) {
+           exemplares.add(new Exemplar(livro));
+        }
+        return exemplares;
     }
 }
