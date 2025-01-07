@@ -6,4 +6,5 @@ Felipe Abdalla,
 Walysson Henrique,
 Lucas Mangefeste
 
-COMPILAÇÃO (WINDOWS): javac -d bin -sourcepath . acesso/*.java biblioteca/*java divisao/*.java infraestrutura/*.java
+COMPILAÇÃO (WINDOWS): javac -d bin -sourcepath . acesso/*.java biblioteca/*java divisao/*.java infraestrutura/*.java Principal.java
+EXECUÇÃO (WINDOWS): java -cp bin sisbli.Principal
